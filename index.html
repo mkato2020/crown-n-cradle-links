@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crown n Cradle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #F3EDE1;
+      --dark:    #1C1710;
+      --mid:     #6B5E4A;
+      --sage:    #3D5C38;
+      --sage-lt: #4E7249;
+      --gold:    #C4A265;
+      --border:  rgba(28, 23, 16, 0.10);
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 56px 24px 64px;
+    }
+
+    /* ── Logo / crown ──────────────────────────────── */
+    .crown {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 20px;
+      opacity: 0.82;
+    }
+
+    /* ── Brand name ────────────────────────────────── */
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .divider {
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      margin: 14px auto 16px;
+    }
+
+    /* ── Tagline ───────────────────────────────────── */
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--mid);
+      text-align: center;
+      line-height: 1.5;
+      max-width: 280px;
+      margin-bottom: 48px;
+    }
+
+    /* ── Links ─────────────────────────────────────── */
+    .links {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--dark);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      position: relative;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(28, 23, 16, 0.08);
+      background: #FDFAF4;
+    }
+
+    .link-btn:active { transform: translateY(0); }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .link-icon svg { width: 20px; height: 20px; }
+
+    .link-label {
+      flex: 1;
+    }
+
+    .link-platform {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 3px;
+    }
+
+    .link-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--dark);
+    }
+
+    .link-arrow {
+      color: var(--gold);
+      font-size: 18px;
+      opacity: 0.7;
+    }
+
+    /* platform accent dots */
+    .dot-yt  { background: #FEF0EF; }
+    .dot-ig  { background: #F5EFF8; }
+    .dot-tt  { background: #EEF5F5; }
+    .dot-fb  { background: #EEF2FA; }
+
+    .dot-yt svg  { color: #E02F2F; }
+    .dot-ig svg  { color: #C13584; }
+    .dot-tt svg  { color: #1a1a1a; }
+    .dot-fb svg  { color: #1877F2; }
+
+    /* ── Footer ────────────────────────────────────── */
+    .footer {
+      margin-top: 52px;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mid);
+      opacity: 0.5;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Crown SVG -->
+  <svg class="crown" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 36 L4 28 L14 12 L26 24 L38 6 L48 28 L48 36 Z" stroke="#C4A265" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+    <circle cx="4"  cy="11" r="2.5" fill="#C4A265"/>
+    <circle cx="26" cy="4"  r="2.5" fill="#C4A265"/>
+    <circle cx="48" cy="11" r="2.5" fill="#C4A265"/>
+    <line x1="4" y1="36" x2="48" y2="36" stroke="#C4A265" stroke-width="1.5"/>
+  </svg>
+
+  <div class="brand">Crown n Cradle</div>
+
+  <div class="divider"></div>
+
+  <p class="tagline">the real stuff nobody tells you about babies &amp; toddlers</p>
+
+  <div class="links">
+
+    <!-- YouTube -->
+    <a class="link-btn" href="https://www.youtube.com/channel/UCN6tAbmBs3V-VsK6h0unEww" target="_blank" rel="noopener">
+      <div class="link-icon dot-yt">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+      </div>
+      <div class="link-label">
+        <div class="link-platform">YouTube</div>
+        <div class="link-title">Watch the Shorts</div>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <!-- Instagram -->
+    <a class="link-btn" href="https://www.instagram.com/crown_n_cradle" target="_blank" rel="noopener">
+      <div class="link-icon dot-ig">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </div>
+      <div class="link-label">
+        <div class="link-platform">Instagram</div>
+        <div class="link-title">Daily Reels &amp; Carousels</div>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <!-- TikTok -->
+    <a class="link-btn" href="https://www.tiktok.com/@crown.n.cradle" target="_blank" rel="noopener">
+      <div class="link-icon dot-tt">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </div>
+      <div class="link-label">
+        <div class="link-platform">TikTok</div>
+        <div class="link-title">Follow Along</div>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <!-- Facebook -->
+    <a class="link-btn" href="https://www.facebook.com/profile.php?id=1065367689990636" target="_blank" rel="noopener">
+      <div class="link-icon dot-fb">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      </div>
+      <div class="link-label">
+        <div class="link-platform">Facebook</div>
+        <div class="link-title">Crown and Cradle</div>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+  </div>
+
+  <p class="footer">for parents of 0 – 3 year olds</p>
+
+</body>
+</html>
